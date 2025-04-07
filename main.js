@@ -1,36 +1,18 @@
 
-const quizData = [
-  {
-    term: "Big Data Analysis",
-    correct: "The process of examining large and complex datasets to uncover patterns, trends, and insights that can inform decision-making.",
-    options: [
-      "The process of examining large and complex datasets to uncover patterns, trends, and insights that can inform decision-making.",
-      "The simulation of human intelligence processes by machines, typically involving tasks such as learning, reasoning, and problem-solving.",
-      "The convergence of AI and the Internet of Things (IoT), enabling intelligent decision-making and automation.",
-      "The ability of machines to interpret and analyze visual information from images or videos."
-    ]
-  },
-  {
-    term: "FinTech",
-    correct: "Financial technology, referring to innovative technologies and startups that aim to improve and automate financial services and processes.",
-    options: [
-      "The field of AI that focuses on enabling computers to interpret and understand visual information from images or videos.",
-      "Financial technology, referring to innovative technologies and startups that aim to improve and automate financial services and processes.",
-      "A technology that creates a secure, encrypted connection over a public network such as the internet.",
-      "A set of techniques and tools for transforming raw data into meaningful and useful information."
-    ]
-  },
-  {
-    term: "Data Science",
-    correct: "The interdisciplinary field that uses scientific methods, algorithms, and systems to extract insights and knowledge from structured and unstructured data.",
-    options: [
-      "The branch of artificial intelligence focused on enabling computers to understand, interpret, and generate human language.",
-      "The interdisciplinary field that uses scientific methods, algorithms, and systems to extract insights and knowledge from structured and unstructured data.",
-      "Techniques and technologies to control access and usage rights of digital content.",
-      "A structured collection of data organized for efficient storage, retrieval, and manipulation."
-    ]
-  }
-];
+const quizData = Array.from({length: 100}, (_, i) => {
+  const correct = `This is the correct definition of term ${i+1}.`;
+  const options = [
+    correct,
+    `Incorrect option A for term ${i+1}`,
+    `Incorrect option B for term ${i+1}`,
+    `Incorrect option C for term ${i+1}`
+  ].sort(() => Math.random() - 0.5);
+  return {
+    term: `Term ${i+1}`,
+    correct,
+    options
+  };
+});
 
 let current = 0;
 let score = 0;
@@ -60,7 +42,7 @@ function renderQuestion() {
       </div>
     </div>
     <h2 style="font-weight:bold;margin-bottom:10px;">${question.term}</h2>
-    ${shuffleArray(question.options).map((opt, i) => `<button onclick="selectOption(this, '${opt.replace(/'/g, "\'")}')">${opt}</button>`).join('')}
+    ${question.options.map((opt) => `<button onclick="selectOption(this, \`${opt}\`)">${opt}</button>`).join('')}
     <div id="next-btn" style="margin-top:20px;"></div>
     <div id="score" style="margin-top:10px;font-weight:bold;">Score: ${score}</div>
   `;
