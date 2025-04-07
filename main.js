@@ -5,9 +5,9 @@ const quizData = [
     "correct": "The process of examining large and complex datasets to uncover patterns, trends, and insights that can inform decision-making.",
     "options": [
       "The process of examining large and complex datasets to uncover patterns, trends, and insights that can inform decision-making.",
-      "Technologies enabling devices to communicate via the internet.",
-      "A virtual environment that replicates physical presence in real or imagined worlds.",
-      "A type of malware that threatens to publish data or block access unless a ransom is paid."
+      "The use of virtual environments for realistic simulation.",
+      "A framework for evaluating the success of IS in organizations.",
+      "A network protocol used for encrypting communication online."
     ]
   },
   {
@@ -15,9 +15,9 @@ const quizData = [
     "correct": "Financial technology, referring to innovative technologies and startups that aim to improve and automate financial services and processes.",
     "options": [
       "Financial technology, referring to innovative technologies and startups that aim to improve and automate financial services and processes.",
-      "The use of AI in art generation and game design.",
-      "A software method for automatically resizing UI across devices.",
-      "Cloud-based video conferencing platforms."
+      "A platform used to monitor network traffic and security.",
+      "A theory of how users adopt and use new technologies.",
+      "The set of technologies for visual object recognition."
     ]
   },
   {
@@ -25,9 +25,9 @@ const quizData = [
     "correct": "The interdisciplinary field that uses scientific methods, algorithms, and systems to extract insights and knowledge from structured and unstructured data.",
     "options": [
       "The interdisciplinary field that uses scientific methods, algorithms, and systems to extract insights and knowledge from structured and unstructured data.",
-      "A database used for spatial location and geographic data.",
-      "An internet protocol used for secure communication.",
-      "Digital payment tools like e-wallets or QR codes."
+      "The use of 3D printing in medical device production.",
+      "A decentralized system that verifies user identities.",
+      "A system to extract, transform, and load data from sources."
     ]
   }
 ];
