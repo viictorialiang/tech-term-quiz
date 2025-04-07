@@ -1,0 +1,6 @@
+
+body { font-family: sans-serif; background: #f9fafb; padding: 20px; }
+button { border: 1px solid #ccc; padding: 10px; border-radius: 12px; background: white; margin-bottom: 10px; width: 100%; text-align: left; cursor: pointer; }
+button:hover { background: #f0f0f0; }
+.correct { border-color: green; background: #d1fae5; }
+.incorrect { border-color: red; background: #fee2e2; }
