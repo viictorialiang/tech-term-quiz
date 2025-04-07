@@ -40,6 +40,7 @@ function renderQuestion() {
   root.innerHTML = `
     <h2 style="font-weight:bold;margin-bottom:10px;">Quiz ${current + 1}: ${question.term}</h2>
     ${question.options.map((opt, i) => `<button onclick="selectOption(this, '${opt.replace(/'/g, "\'")}')">${opt}</button>`).join('')}
+    <div id="next-btn" style="margin-top:20px;"></div>
   `;
 }
 
@@ -55,6 +56,8 @@ function selectOption(button, selected) {
     buttons.forEach(btn => {
       if (btn.innerText === question.correct) btn.classList.add("correct");
     });
+    const nextBtn = document.getElementById("next-btn");
+    nextBtn.innerHTML = '<button onclick="nextQuestion()">Next Question</button>';
   }
 }
 
